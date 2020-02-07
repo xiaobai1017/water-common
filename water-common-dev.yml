@@ -12,8 +12,8 @@ jdbc:
     username: root
   water:
     jdbc-url: jdbc:mysql://localhost:3306/cqep_bishan?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
-    password: root
-    username: 123456
+    password: 123456
+    username: root
 logging:
   file: bishan.log
   level:
