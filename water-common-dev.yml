@@ -19,9 +19,9 @@ ai:
 jdbc:
   water:
     driver-class-name: com.mysql.jdbc.Driver
-    jdbc-url: jdbc:mysql://zhcq.f3322.net:3323/cqwater_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
-    username: cqwater
-    password: cqwater123!@#
+    jdbc-url: jdbc:mysql://localhost:3306/cqep_bishan?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
     minIdle: ${minIdle}
     maxActive: ${maxActive}
     maxWait: ${maxWait}
@@ -36,7 +36,7 @@ jdbc:
     test-on-borrow: true
     min-evictable-idle-time-millis: 600000
     time-between-eviction-runs-millis: 300000
-  
+
 sms:
   username: admin
   password: admin
@@ -83,7 +83,7 @@ spring:
     database: 0
     host: 127.0.0.1
     port: 6379
-    password: 
+    password:
     timeout: 10000
     jedis:
       pool:
@@ -96,4 +96,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
-      
