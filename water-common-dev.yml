@@ -79,6 +79,9 @@ shiro:
   saccountname: saccountname
   userkey: id
   usertable: user
+  filter:
+    filterChainDefinitions: "/*.png=anon\n/*.txt=anon\n/static/**=anon\n/assets/**=anon\n/logout=logout\n/actuator/**=anon\n/info=anon\n/metrics=anon\n/trace=anon\n/env=anon\n/dump=anon\n/jolokia=anon\n/jolokia/**=anon\n/logfile=anon\n/configprops=anon\n/**=authc"
+    #    filterChainDefinitions: "/**=anon"
 sms:
   bishan:
     url: http://122.114.177.198:8082/sms/send
