@@ -27,20 +27,20 @@ jdbc:
     driver-class-name: com.mysql.jdbc.Driver
     initial-size: 10
     jdbc-url: jdbc:mysql://122.114.177.198:3307/cqep_bishan?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+    username: bishan
+    password: bishan123
     log-abandoned: true
     maxActive: ${maxActive}
     maxWait: ${maxWait}
     min-evictable-idle-time-millis: 600000
     min-idle: 5
     minIdle: ${minIdle}
-    password: bishan123
     remove-abandoned: true
     remove-abandoned-timeout: 180
     test-on-borrow: true
     test-while-idle: true
     time-between-eviction-runs-millis: 300000.0
     timeBetweenEvictionRunsMillis: ${timeBetweenEvictionRunsMillis}
-    username: bishan
     validation-query: select 1
 map:
   test: 1
@@ -63,7 +63,7 @@ mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
   typeAliasesPackage: com.zhgt.entity;
 server:
-  port: 8081
+  port: 8001
   servlet:
     context-path: /app
     session:
