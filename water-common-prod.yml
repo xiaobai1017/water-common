@@ -41,7 +41,8 @@ sms:
   username: admin
   password: admin
   url: http://10.118.2.78:8090/api/sms/sendSms/
-
+  #任务未完成发短信通知管理员开关
+  issend: false
 server:
   port: 8001
   servlet:
