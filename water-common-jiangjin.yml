@@ -1,0 +1,148 @@
+cqep:
+  url: 127.0.0.1:8080/cqep
+file:
+  upload:
+    path: D:/temp/
+jdbc:
+  shijuwater:
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 10
+    jdbc-url: jdbc:mysql://zhcq.f3322.net:3323/cqwater_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
+    log-abandoned: true
+    maxActive: ${maxActive}
+    maxWait: ${maxWait}
+    min-evictable-idle-time-millis: 600000
+    min-idle: 5
+    minIdle: ${minIdle}
+    password: cqwater123!@#
+    remove-abandoned: true
+    remove-abandoned-timeout: 180
+    test-on-borrow: true
+    test-while-idle: true
+    time-between-eviction-runs-millis: 300000.0
+    timeBetweenEvictionRunsMillis: ${timeBetweenEvictionRunsMillis}
+    username: cqwater
+    validation-query: select 1
+  water:
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 10
+    jdbc-url: jdbc:mysql://122.114.177.198:3307/cqep_bishan?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+    username: bishan
+    password: bishan123
+    log-abandoned: true
+    maxActive: ${maxActive}
+    maxWait: ${maxWait}
+    min-evictable-idle-time-millis: 600000
+    min-idle: 5
+    minIdle: ${minIdle}
+    remove-abandoned: true
+    remove-abandoned-timeout: 180
+    test-on-borrow: true
+    test-while-idle: true
+    time-between-eviction-runs-millis: 300000.0
+    timeBetweenEvictionRunsMillis: ${timeBetweenEvictionRunsMillis}
+    validation-query: select 1
+map:
+  test: 1
+maxActive: 50
+maxWait: 60000
+minIdle: 10
+mybatis-plus:
+  configuration:
+    cache-enabled: false
+    call-setters-on-nulls: true
+    map-underscore-to-camel-case: true
+  global-config:
+    db-column-underline: true
+    field-strategy: 2
+    id-type: 0
+    logic-delete-value: -1
+    logic-not-delete-value: 0
+    refresh-mapper: true
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+  mapper-locations: classpath:mapper/**/*.xml
+  typeAliasesPackage: com.zhgt.entity;
+server:
+  port: 8001
+  servlet:
+    context-path: /app
+    session:
+      timeout: 7200
+  tomcat:
+    connection-timeout: 10000
+    max-connections: 2000
+    max-threads: 1000
+    min-threads: 500
+    uri-encoding: utf-8
+shiro:
+  pwdname: spassword
+  saccountname: saccountname
+  userkey: id
+  usertable: user
+#  filter:
+#    filterChainDefinitions: "/*.png=anon\n/*.txt=anon\n/static/**=anon\n/assets/**=anon\n/logout=logout\n/actuator/**=anon\n/info=anon\n/metrics=anon\n/trace=anon\n/env=anon\n/dump=anon\n/jolokia=anon\n/jolokia/**=anon\n/logfile=anon\n/configprops=anon\n/**=authc"
+    #    filterChainDefinitions: "/**=anon"
+sms:
+  bishan:
+    url: http://122.114.177.198:8082/sms/send
+  issend: false;
+  password: admin
+  url: http://10.118.2.78:8090/api/sms/sendSms/
+  username: admin
+spring:
+  freemarker:
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    settings:
+      number_format: 0.##
+    template-loader-path: classpath:/templates
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    timezone: GMT+8
+  redis:
+    database: 0
+    host: 127.0.0.1
+    jedis:
+      pool:
+        max-active: 1000
+        max-idle: 10
+        max-wait: -1
+        min-idle: 1
+    password: ''
+    port: 6379
+    timeout: 10000
+  thymeleaf:
+    prefix: classpath:/templates
+super:
+  admin:
+    id: 111111
+timeBetweenEvictionRunsMillis: 60000
+xcrw:
+  imgupload:
+    url: proxyImg/upload
+
+eureka:
+  instance:
+    appname: water-jiangjin
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+
+management:
+  health:
+    redis:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
