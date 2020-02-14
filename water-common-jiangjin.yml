@@ -90,11 +90,6 @@ sms:
   url: http://10.118.2.78:8090/api/sms/sendSms/
   username: admin
 spring:
-  boot:
-    admin:
-      client:
-        instance:
-          name: water-common
   freemarker:
     cache: false
     charset: UTF-8
