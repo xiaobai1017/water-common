@@ -94,7 +94,7 @@ spring:
     admin:
       client:
         instance:
-          name: water-jiangjin
+          name: water-common
   freemarker:
     cache: false
     charset: UTF-8
