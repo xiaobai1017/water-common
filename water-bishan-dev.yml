@@ -1,52 +1,32 @@
-cqep:
-  url: 127.0.0.1:8080/cqep
-file:
-  upload:
-    path: D:/temp/
+cqep.url: 127.0.0.1:8080/cqep
+map.test: 1
+file.upload.path: /Users/hgc/i/workspace/company-project/uploadfile
+super.admin.id: 111111
+xcrw.imgupload.url: proxyImg/upload
+city:
+  bureau:
+    addr: http://10.118.14.35:8081/app
+    annualCommitUri: /ndgz/wttz/page
 jdbc:
-  shijuwater:
-    driver-class-name: com.mysql.jdbc.Driver
-    initial-size: 10
-    jdbc-url: jdbc:mysql://zhcq.f3322.net:3323/cqwater_test?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull
-    log-abandoned: true
-    maxActive: ${maxActive}
-    maxWait: ${maxWait}
-    min-evictable-idle-time-millis: 600000
-    min-idle: 5
-    minIdle: ${minIdle}
-    password: cqwater123!@#
-    remove-abandoned: true
-    remove-abandoned-timeout: 180
-    test-on-borrow: true
-    test-while-idle: true
-    time-between-eviction-runs-millis: 300000.0
-    timeBetweenEvictionRunsMillis: ${timeBetweenEvictionRunsMillis}
-    username: cqwater
-    validation-query: select 1
   water:
     driver-class-name: com.mysql.jdbc.Driver
     initial-size: 10
-    jdbc-url: jdbc:mysql://122.114.177.198:3307/cqep_bishan?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
-    username: bishan
-    password: bishan123
+    jdbc-url: jdbc:mysql://122.114.177.198:3307/cqep_common?useUnicode=true&characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=convertToNull&generateSimpleParameterMetadata=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: zxsl@88888888
     log-abandoned: true
-    maxActive: ${maxActive}
-    maxWait: ${maxWait}
+    maxActive: 50
+    maxWait: 60000
     min-evictable-idle-time-millis: 600000
     min-idle: 5
-    minIdle: ${minIdle}
+    minIdle: 10
     remove-abandoned: true
     remove-abandoned-timeout: 180
     test-on-borrow: true
     test-while-idle: true
     time-between-eviction-runs-millis: 300000.0
-    timeBetweenEvictionRunsMillis: ${timeBetweenEvictionRunsMillis}
+    timeBetweenEvictionRunsMillis: 60000
     validation-query: select 1
-map:
-  test: 1
-maxActive: 50
-maxWait: 60000
-minIdle: 10
 mybatis-plus:
   configuration:
     cache-enabled: false
@@ -79,9 +59,6 @@ shiro:
   saccountname: saccountname
   userkey: id
   usertable: user
-#  filter:
-#    filterChainDefinitions: "/*.png=anon\n/*.txt=anon\n/static/**=anon\n/assets/**=anon\n/logout=logout\n/actuator/**=anon\n/info=anon\n/metrics=anon\n/trace=anon\n/env=anon\n/dump=anon\n/jolokia=anon\n/jolokia/**=anon\n/logfile=anon\n/configprops=anon\n/**=authc"
-    #    filterChainDefinitions: "/**=anon"
 sms:
   bishan:
     url: http://122.114.177.198:8082/sms/send
@@ -118,14 +95,6 @@ spring:
     timeout: 10000
   thymeleaf:
     prefix: classpath:/templates
-super:
-  admin:
-    id: 111111
-timeBetweenEvictionRunsMillis: 60000
-xcrw:
-  imgupload:
-    url: proxyImg/upload
-
 management:
   health:
     redis:
